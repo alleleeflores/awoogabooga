@@ -1,0 +1,44 @@
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #C0C8D5,
+        #9DA9C4,
+        #72638F,
+        #BA869F,
+        #D1ABB6);
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    background-image: var(--gradient);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 400%;
+    animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title, .sub{
+    color: #FFF;
+    text-align: center;
+}
+
+.sub{
+    margin: 1.5em 1em;
+}
+
